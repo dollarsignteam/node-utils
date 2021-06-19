@@ -1,5 +1,7 @@
 import { stringify } from 'json-cycle';
+
 import { parseJSON } from './parse-json';
+
 /**
  * @param {unknown} data unknown type
  * @returns {string} JSON `string` type
