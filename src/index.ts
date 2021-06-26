@@ -1,5 +1,5 @@
 export * from './is-disabled';
 export * from './is-empty';
 export * from './is-enabled';
+export * from './json-stringify';
 export * from './parse-json';
-export * from './to-json-string';
