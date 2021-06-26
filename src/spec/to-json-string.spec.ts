@@ -15,9 +15,12 @@ describe('toJSONString', () => {
   });
 
   it('should return JSON string when input is data object', () => {
-    const data = { foo: 'bar', bar: null };
-    data.bar = data;
-    const result = toJSONString(data);
-    expect(result).toBe('{"foo":"bar","bar":{"$ref":"$"}}');
+    const foo = function (): void {
+      this.name = 'foo';
+      this.bar = this;
+      this.error = new Error('Error of foo');
+    };
+    const result = toJSONString(new foo());
+    expect(result).toBe('{"name":"foo","bar":{"$ref":"$"},"error":{}}');
   });
 });

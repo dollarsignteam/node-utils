@@ -1,6 +1,15 @@
 import { stringify } from 'json-cycle';
+import { format } from 'util';
 
 import { parseJSON } from './parse-json';
+
+function errorReplacer(key, value): unknown {
+  console.log({ key, value });
+  if (value instanceof Error) {
+    return format(value);
+  }
+  return value;
+}
 
 /**
  * @param {unknown} data unknown type
@@ -11,5 +20,5 @@ export function toJSONString(data: unknown): string {
     const json = parseJSON(data);
     return json === null ? data : stringify(json);
   }
-  return stringify(data);
+  return stringify(data, errorReplacer);
 }
