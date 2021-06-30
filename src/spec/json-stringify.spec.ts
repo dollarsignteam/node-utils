@@ -23,6 +23,16 @@ describe('jsonStringify', () => {
       this.error.code = 'INTERNAL_ERROR';
     };
     const result = jsonStringify(new foo());
-    expect(result).toBe(`{"bar":"[Circular]","error":"[Error: Internal error] { internal: true, code: 'INTERNAL_ERROR' }","name":"foo"}`);
+    expect(result).toBe(`{"bar":"[Circular]","error":"{ [Error: Internal error] internal: true, code: 'INTERNAL_ERROR' }","name":"foo"}`);
+  });
+
+  it('should return JSON string  contain error object', () => {
+    const foo = function (): void {
+      this.error = new Error('Internal error');
+      this.error.code = 'INTERNAL_ERROR';
+      this.error.message = [{ foo: 'bar' }, this];
+    };
+    const result = jsonStringify(new foo());
+    expect(result).toBe(`{"error":"{ [Error: [ { foo: 'bar' }, { error: { code: 'INTERNAL_ERROR' } } ]] code: 'INTERNAL_ERROR' }"}`);
   });
 });

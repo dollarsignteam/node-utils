@@ -1,5 +1,5 @@
 import stringify from 'safe-stable-stringify';
-import { format } from 'util';
+import { formatWithOptions } from 'util';
 
 import { parseJSON } from './parse-json';
 
@@ -11,7 +11,10 @@ import { parseJSON } from './parse-json';
 function dataReplacer(key: string, value: unknown): unknown {
   if (value instanceof Error) {
     delete value.stack;
-    return format(value);
+    if (typeof value.message === 'object') {
+      value.message = formatWithOptions({ compact: true }, JSON.parse(stringify(value.message)));
+    }
+    return formatWithOptions({ compact: true }, value);
   }
   return value;
 }
