@@ -33,7 +33,8 @@
     "type-check": "tsc-files --noEmit",
     "fix": "tsc --noEmit && yarn format && yarn lint",
     "prepare": "husky install",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "docs": "typedoc --theme default --packages ."
   },
   "release": {
     "branches": [
@@ -69,6 +70,7 @@
     "tsc-alias": "^1.3.7",
     "tsc-files": "^1.1.2",
     "tsconfig-paths": "^3.9.0",
+    "typedoc": "^0.21.2",
     "typescript": "^4.3.5"
   }
 }
