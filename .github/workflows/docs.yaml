@@ -2,7 +2,8 @@ name: Publish docs to GitHub Pages
 
 on:
   release:
-    types: [released]
+    types:
+      - created
 
 jobs:
   publish:
