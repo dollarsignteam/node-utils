@@ -34,7 +34,7 @@
     "fix": "tsc --noEmit && yarn format && yarn lint",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
-    "docs": "typedoc --theme default --packages ."
+    "docs": "typedoc --theme default src/index.ts"
   },
   "release": {
     "branches": [
