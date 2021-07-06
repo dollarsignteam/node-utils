@@ -118,5 +118,6 @@ dist
 .pnp.*
 
 # custom
+/docs
 /tsconfig.*.json
 .DS_*
