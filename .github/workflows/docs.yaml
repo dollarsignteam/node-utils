@@ -1,0 +1,26 @@
+name: Publish docs to GitHub Pages
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node v14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install dependencies
+        run: yarn install
+      - name: Generate docs
+        run: yarn docs
+      - name: Publish docs
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+        with:
+          dir: docs
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
