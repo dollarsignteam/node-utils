@@ -16,6 +16,10 @@ yarn add @dollarsign/utils
 npm install --save @dollarsign/utils
 ```
 
+## Documentation
+
+<https://dollarsignteam.github.io/node-utils/>
+
 ## Contributing
 
 Contributions welcome! See [Contributing](CONTRIBUTING.md).
