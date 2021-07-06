@@ -1,7 +1,6 @@
 /**
- * @param {String | Number | Object} value
- * @returns {Boolean} true & false
- * @description this value is empty check
+ * @param value - the value to check
+ * @returns `true` if value is empty, else `false`
  */
 export const isEmpty = (value: string | number | Record<string, unknown>): boolean => {
   if (value === null) {

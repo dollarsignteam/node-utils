@@ -1,6 +1,6 @@
 /**
- * @param {string} value data string
- * @returns {boolean} is match disabled string
+ * @param value - data string
+ * @returns matched result of disabled string
  */
 export function isDisabled(value: string): boolean {
   const enabled = ['0', 'false', 'no', 'off', 'close', 'disable', 'disabled'];

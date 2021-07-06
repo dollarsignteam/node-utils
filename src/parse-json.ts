@@ -1,6 +1,6 @@
 /**
- * @param {unknown} data unknown type
- * @returns {T} null or JSON `T` type
+ * @param data - JSON string
+ * @returns null or JSON `T` type
  */
 export function parseJSON<T>(data: unknown): T | null {
   if (typeof data === 'object') {

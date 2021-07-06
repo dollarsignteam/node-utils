@@ -4,9 +4,9 @@ import { formatWithOptions } from 'util';
 import { parseJSON } from './parse-json';
 
 /**
- * @param {string} key data key
- * @param {unknown} value data value
- * @return {unknown} modified value
+ * @param key - data key
+ * @param value - data value
+ * @returns modified value
  */
 function dataReplacer(key: string, value: unknown): unknown {
   if (value instanceof Error) {
@@ -20,10 +20,10 @@ function dataReplacer(key: string, value: unknown): unknown {
 }
 
 /**
- * @param {unknown} value data to be converted
- * @param {(key:string, value:unknown) => unknown} replacer a function that transforms the results
- * @param {string|number} space adds indentation, white space, and line break characters
- * @returns {string} JSON text to make it easier to read
+ * @param value - data to be converted
+ * @param replacer - a function that transforms the results
+ * @param space - adds indentation, white space, and line break characters
+ * @returns JSON text to make it easier to read
  */
 export function jsonStringify(value: unknown, replacer?: (key: string, value: unknown) => unknown, space?: string | number): string {
   const rep = replacer || dataReplacer;
