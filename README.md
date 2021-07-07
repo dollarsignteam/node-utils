@@ -1,6 +1,6 @@
-# node-utils
+# Utilities for Node.js
 
-Utilities for the Node.js
+Utilities library for the Node.js
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dollarsignteam/node-utils/Node.js%20Package?logo=github)][1]
 [![npm (scoped)](https://img.shields.io/npm/v/@dollarsign/utils?logo=npm)][2]
