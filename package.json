@@ -27,7 +27,6 @@
     "lint": "eslint --fix --ext .ts 'src/**/*.ts'",
     "fix": "tsc --noEmit && yarn format && yarn lint",
     "prepare": "husky install",
-    "commit": "git-cz",
     "prebuild": "rimraf dist/*",
     "build": "tsc && tsc-alias",
     "test": "jest --forceExit --detectOpenHandles",
