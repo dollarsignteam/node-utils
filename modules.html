@@ -64,7 +64,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function"><a href="modules.html#delay" class="tsd-kind-icon">delay</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#delay" class="tsd-kind-icon">delay</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#isDisabled" class="tsd-kind-icon">is<wbr>Disabled</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#isEmpty" class="tsd-kind-icon">is<wbr>Empty</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#isEnabled" class="tsd-kind-icon">is<wbr>Enabled</a></li>
@@ -78,19 +78,25 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function">
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
 					<a name="delay" class="tsd-anchor"></a>
 					<h3>delay</h3>
-					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">delay<span class="tsd-signature-symbol">(</span>ms<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">delay&lt;T&gt;<span class="tsd-signature-symbol">(</span>ms<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/699db19/src/delay.ts#L5">delay.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/d49a2bb/src/delay.ts#L6">delay.ts:6</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -99,9 +105,15 @@
 										<p>number of milliseconds to delay</p>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> value: <span class="tsd-signature-type">T</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>value to be resolved with after a timeout of <code>ms</code> milliseconds</p>
+									</div>
+								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>new <code>Promise</code></p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Resolved promise</p>
 						</li>
 					</ul>
 				</section>
@@ -115,7 +127,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/699db19/src/is-disabled.ts#L5">is-disabled.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/d49a2bb/src/is-disabled.ts#L5">is-disabled.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -142,7 +154,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/699db19/src/is-empty.ts#L5">is-empty.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/d49a2bb/src/is-empty.ts#L5">is-empty.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -169,7 +181,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/699db19/src/is-enabled.ts#L5">is-enabled.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/d49a2bb/src/is-enabled.ts#L5">is-enabled.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -196,7 +208,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/699db19/src/is-production.ts#L4">is-production.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/d49a2bb/src/is-production.ts#L4">is-production.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -214,7 +226,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/699db19/src/json-stringify.ts#L28">json-stringify.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/d49a2bb/src/json-stringify.ts#L28">json-stringify.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -274,7 +286,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/699db19/src/parse-json.ts#L5">parse-json.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/dollarsignteam/node-utils/blob/d49a2bb/src/parse-json.ts#L5">parse-json.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -309,7 +321,7 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function">
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#delay" class="tsd-kind-icon">delay</a>
 					</li>
 					<li class=" tsd-kind-function">
