@@ -1,7 +1,8 @@
 /**
  * @param ms - number of milliseconds to delay
- * @returns new `Promise`
+ * @param value -  value to be resolved with after a timeout of `ms` milliseconds
+ * @returns Resolved promise
  */
-export function delay(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
+export function delay<T>(ms: number, value?: T): Promise<T> {
+  return new Promise(resolve => setTimeout(() => resolve(value), ms));
 }
