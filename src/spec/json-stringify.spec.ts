@@ -14,6 +14,12 @@ describe('jsonStringify', () => {
     expect(result).toBe(stringify);
   });
 
+  it('should return JSON string when input is Error', () => {
+    const data = Error('foo');
+    const result = jsonStringify(data);
+    expect(result).toBe('[Error: foo]');
+  });
+
   it('should return JSON string when input is data object', () => {
     const foo = function (): void {
       this.name = 'foo';

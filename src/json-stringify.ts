@@ -31,5 +31,6 @@ export function jsonStringify(value: unknown, replacer?: (key: string, value: un
     const json = parseJSON(value);
     return json === null ? value : stringify(json, rep, space);
   }
-  return stringify(value, rep, space);
+  const text = stringify(value, rep, space);
+  return value instanceof Error ? text.slice(1, -1) : text;
 }
