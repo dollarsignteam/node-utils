@@ -10,14 +10,11 @@
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
+    "baseUrl": "src",
     "incremental": false,
     "paths": {
-      "@dollarsign/utils": [
-        "src"
-      ],
-      "@dollarsign/utils/*": [
-        "src/*"
+      "@/*": [
+        "*"
       ]
     }
   },
