@@ -21,6 +21,11 @@ describe('isEmpty', () => {
     expect(result).toBeTruthy();
   });
 
+  test('empty array is empty', () => {
+    const result = isEmpty([]);
+    expect(result).toBeTruthy();
+  });
+
   test('`foo` is not empty', () => {
     const result = isEmpty('foo');
     expect(result).toBeFalsy();

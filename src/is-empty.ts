@@ -2,14 +2,12 @@
  * @param value - the value to check
  * @returns `true` if value is empty, else `false`
  */
-export const isEmpty = (value: string | number | Record<string, unknown>): boolean => {
-  if (value === null) {
+export const isEmpty = (value: string | number | unknown[] | Record<string, unknown>): boolean => {
+  if (value === null || value === undefined) {
     return true;
-  } else if (typeof value !== 'number' && value === '') {
+  } else if (typeof value === 'string' && !value.length) {
     return true;
-  } else if (value === 'undefined' || value === undefined) {
-    return true;
-  } else if (value !== null && typeof value === 'object' && !Object.keys(value).length) {
+  } else if (typeof value === 'object' && !Object.keys(value).length) {
     return true;
   } else {
     return false;
