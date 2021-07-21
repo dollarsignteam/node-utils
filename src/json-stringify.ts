@@ -1,7 +1,6 @@
+import { parseJSON } from '@dollarsign/utils';
 import stringify from 'safe-stable-stringify';
 import { formatWithOptions } from 'util';
-
-import { parseJSON } from './parse-json';
 
 /**
  * @param key - data key
